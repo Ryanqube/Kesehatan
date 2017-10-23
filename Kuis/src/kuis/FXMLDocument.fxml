@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kuis.FXMLDocumentController">
+   <children>
+      <GridPane layoutX="141.0" layoutY="85.0" prefHeight="91.0" prefWidth="319.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="74.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="126.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Nama" />
+            <Label text="Tinggi" GridPane.rowIndex="1" />
+            <Label text="Berat Badan" GridPane.rowIndex="2" />
+            <JFXTextField fx:id="nama" GridPane.columnIndex="1" />
+            <JFXTextField fx:id="tinggi" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <JFXTextField fx:id="berat" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Label layoutX="189.0" layoutY="24.0" text="Pengecekan Kesehatan">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="141.0" layoutY="185.0" text="Jenis Kelamin" />
+      <JFXButton fx:id="Proses" layoutX="186.0" layoutY="244.0" onAction="#lanjut" text="Proses" />
+      <JFXButton fx:id="Reset" layoutX="324.0" layoutY="244.0" onAction="#hapus" text="Reset" />
+      <Label layoutX="141.0" layoutY="280.0" text="Berat Ideal Anda" />
+      <Label layoutX="317.0" layoutY="280.0" text="Kg" />
+      <Label layoutX="141.0" layoutY="326.0" text="Hasil Analisa Kesehatan Anda" />
+      <TextArea fx:id="beratideal" layoutX="244.0" layoutY="270.0" prefHeight="37.0" prefWidth="64.0" />
+      <TextArea fx:id="hasil1" layoutX="137.0" layoutY="343.0" prefHeight="91.0" prefWidth="279.0" />
+      <TextArea fx:id="hasil2" layoutX="137.0" layoutY="447.0" prefHeight="91.0" prefWidth="279.0" />
+      <Group layoutX="129.0" layoutY="227.0" />
+      <RadioButton fx:id="cewek" layoutX="244.0" layoutY="218.0" mnemonicParsing="false" text="Perempuan">
+         <toggleGroup>
+            <ToggleGroup fx:id="kk" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="laki" layoutX="243.0" layoutY="185.0" mnemonicParsing="false" text="Laki-Laki" toggleGroup="$kk" />
+   </children>
+</AnchorPane>
